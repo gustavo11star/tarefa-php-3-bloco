@@ -12,7 +12,9 @@
         <input type="number" name="num" id="">
         <button type="submit">Verificar</button>
     </form>
-    
+    <br>
+    <a href="http://localhost:8080/">Voltar</a>
+    <br>
 </body>
 </html>
 
@@ -20,7 +22,7 @@
 
     $data =[1,2,3,4,5,6,7,8,9,10,11,12];
 
-    if (isset($_POST)) {
+    if (count($_POST) > 0) {
         # code...
         $post = $_POST;
         if (!in_array((int)$post['num'],$data)) {

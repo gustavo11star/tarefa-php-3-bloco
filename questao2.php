@@ -15,13 +15,15 @@
         <button type="submit">Verificar</button>
 
     </form>
-    
+    <br>
+    <a href="http://localhost:8080/">Voltar</a>
+    <br>
 </body>
 </html>
 
 <?php 
 
-if (isset($_POST)) {
+if (count($_POST) > 0) {
     # code...
    # code...
     $post = $_POST;
