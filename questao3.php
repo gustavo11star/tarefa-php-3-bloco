@@ -21,26 +21,29 @@
 
 <?php 
 
-if (isset($_POST)) {
+if (count($_POST)) {
     # code...
    # code...
     $post = $_POST;
+    $_POST = null;
     $A = $post['num1']; 
     $B = $post['num2']; 
     $C = $post['num3'];
+    $aux = $A;
 
-    if ( ($A< $B+$C) and ($B<$A+$C)and($C<$A){
-        echo "Os valores digitados formam um Triangulo";
+    if ($A == $aux and $B == $aux and $C == $aux ){
+        echo "Triângulo Equilátero";
     }
-    if (($A== and ($B==$C)){
-        echo "Os valores digitados formam um Triangulo Equilatero";
-    }else if (($A == $B || $B == $C || $C == $A){
-        echo "Os valores digitados formam um Triangulo Isosceles";
-    }else {
-        echo "Os valores digitados formam um Triangulo Escaleno";
-    }
-                     
 
+    if ($A != $B and $B != $C and $C != $A){
+        echo "Triângulo Escaleno";
+    }
+    
+    $data = array_unique([$A,$B,$C]);
+    if (count($data) == 2) {
+        # code...
+        echo "Triângulo Isósceles";
+    }
 
 }
 
